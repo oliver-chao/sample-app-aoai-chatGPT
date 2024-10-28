@@ -73,6 +73,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'sample-app-github-cd'
-          slot-name: 'Production'
+          app-name: 'azurechatbotpoc'
+          # slot-name: 'Production'
           
