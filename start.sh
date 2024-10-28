@@ -20,7 +20,19 @@ if [ $? -ne 0 ]; then
 fi
 
 cd ..
+
+# Load environment variables
 . ./scripts/loadenv.sh
+
+# Install Python dependencies
+echo ""
+echo "Installing backend Python dependencies"
+echo ""
+pip install -r requirements.txt
+if [ $? -ne 0 ]; then
+    echo "Failed to install Python dependencies"
+    exit $?
+fi
 
 echo ""
 echo "Starting backend"
